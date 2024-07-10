@@ -45,3 +45,6 @@ poetry install # 依存パッケージのインストール
 
 ### 実行ファイルの生成
 
+```sh
+poetry run task build
+```

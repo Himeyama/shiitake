@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "shiitake"
+version = "24.7.11"
+description = ""
+authors = ["MURATA Mitsuharu <hikari.photon+dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+fastapi = "^0.111.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.9.0"
+taskipy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+build = "poetry run pyinstaller -y shiitake/__main__.py"
